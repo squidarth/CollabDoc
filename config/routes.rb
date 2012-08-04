@@ -1,4 +1,8 @@
 Collabdoc::Application.routes.draw do
+  get "public/index"
+
+  get "public/about"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
