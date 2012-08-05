@@ -12,7 +12,8 @@ Collabdoc::Application.routes.draw do
   get "docs/destroy"
 
   devise_for :users
-
+  
+  resources :users
   root :to => "public#index"
 
   #static pages

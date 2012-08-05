@@ -37,7 +37,9 @@ class DocsController < ApplicationController
 
   def publish
     @doc = Doc.find(params[:id])
-    parsed_text = @doc.parse
+    @doc.parse
+    response.headers["Content-Type"] = "application/octet-stream"
+    response.headers["MIME-type"] = "application/octet-stream" 
     render "layouts/published_page", doc: @doc 
   end
 end
