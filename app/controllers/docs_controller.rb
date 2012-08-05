@@ -5,6 +5,11 @@ class DocsController < ApplicationController
     @docs = current_user.docs.all.alive
   end
 
+  def new
+    @user = current_user 
+    @doc = Doc.new    
+  end
+  
   def show
     @doc = Doc.find(params[:id]) 
     return e404 unless @doc.present? || @doc.user == current_user 

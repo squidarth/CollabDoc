@@ -14,6 +14,7 @@ Collabdoc::Application.routes.draw do
   devise_for :users
   
   resources :users
+  resources :docs 
   root :to => "public#index"
 
   #static pages
