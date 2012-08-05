@@ -37,7 +37,7 @@ class DocsController < ApplicationController
 
   def publish
     @doc = Doc.find(params[:id])
-    parsed_text = Doc.parse(@doc.content)
+    parsed_text = @doc.parse
     render "layouts/published_page", doc: @doc 
   end
 end

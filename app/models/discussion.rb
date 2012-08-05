@@ -1,4 +1,5 @@
 class Discussion
   include Mongoid::Document
-  field :title, :type => String
+  field :name, :type => String
+  field :content, :type => Text
 end
